@@ -15,6 +15,7 @@ const countReq = (req, res, next) => {
 
 app.get("/count", countReq, (req, res) => {
   console.log(`Request Count:${count}`);
+  return res.json({ data: count });
 });
 
 app.get("/", (req, res) => {
